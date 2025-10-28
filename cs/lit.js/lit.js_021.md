@@ -10,10 +10,10 @@ Denne innledende fasen etablerer det nødvendige grunnlaget for Lit.js' reaktive
 
 #### 1.1. Hva er Lit.js V3? Enkelhet, Ytelse og Standarder
 
-Lit er et minimalistisk JavaScript-bibliotek designet for å bygge raske, lettvektige webkomponenter.^1^ Kjernen i Lit er dens vektlegging av Web Component-standarder, noe som betyr at hver komponent som opprettes er et standardisert Custom Element. Denne standardiseringen sikrer maksimal interoperabilitet: Lit-komponenter kan brukes sømløst i håndskrevet HTML, i Content Management Systems (CMS), eller innenfor ethvert større JavaScript-rammeverk som React, Angular eller Vue, uten friksjon.^1^
+Lit er et minimalistisk JavaScript-bibliotek designet for å bygge raske, lettvektige webkomponenter.<!-- 1 --> Kjernen i Lit er dens vektlegging av Web Component-standarder, noe som betyr at hver komponent som opprettes er et standardisert Custom Element. Denne standardiseringen sikrer maksimal interoperabilitet: Lit-komponenter kan brukes sømløst i håndskrevet HTML, i Content Management Systems (CMS), eller innenfor ethvert større JavaScript-rammeverk som React, Angular eller Vue, uten friksjon.^1^
 
 På et arkitektonisk nivå er `LitElement` klassen en utvidelse av den native `HTMLElement` via mellomklassen `ReactiveElement`.^2^ Denne arven gir komponenten tilgang til alle standard DOM-funksjoner, samtidig som den implementerer Lits kraftige reaktivitetssystem. Ytelsen i Lit oppnås primært gjennom `lit-html`s deklarative maler. I motsetning til rammeverk som er avhengige av et virtuelt DOM for å diffing, bruker Lit tagged template literals for å utføre **targeted DOM updates** . Dette innebærer at Lit kun oppdaterer de spesifikke uttrykkene i DOM-en som er direkte knyttet til de endrede JavaScript-dataene, noe som resulterer i eksepsjonelt rask og effektiv gjengivelse.^1^
-
+s
 **Praktiske Øvinger:**
 
 * **Web Components-fundament (Vanilla JS):** Skriv en ren JavaScript-klasse som utvider `HTMLElement`. Bruk deretter `.attachShadow({ mode: 'open' })` i konstruktøren for å feste en Shadow DOM. Legg til statisk innhold. Inspiser elementet i nettleserens utviklerverktøy for å se Shadow DOM-innkapslingen.^2^
